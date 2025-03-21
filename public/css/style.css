@@ -718,6 +718,16 @@ width: 400px;
     border-top: none;
 }
 
+.registrated{
+	width: 100%;
+	margin-top: 50px;
+}
+
+.registrated-div{
+	display: flex;
+	justify-content: center;
+}
+
 /*******************************/
 /********* Contact CSS **********/
 /*******************************/
