@@ -727,6 +727,17 @@ width: 400px;
 	justify-content: center;
 }
 
+.promo-image{
+	width: 90%;
+	margin-bottom: 80px;
+}
+
+.img_show_row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
 @media(max-width: 767.98px) {
    .contact_row{
 	display: flex;
@@ -742,6 +753,12 @@ width: 400px;
 	.contact-item-2{
 		margin-left: 100px;
 	}
+	
+	.img_show_row {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 }
 
 /*******************************/
