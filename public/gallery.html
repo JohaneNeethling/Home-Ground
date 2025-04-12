@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Gallery</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Home Ground Development" name="keywords">
+        <meta content="Home Ground Development" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+
+        <!-- Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Top Bar Start -->
+			<style>
+.top-bar {
+    position: relative;
+    height: 200px;
+    background: #FFFFFF;
+}
+
+.top-bar .logo {
+    padding: 35px 0;
+    text-align: left;
+    overflow: hidden;
+}
+
+.top-bar .logo h1 {
+    margin: 0;
+    color: white;
+    font-size: 20px;
+    line-height: 60px;
+    font-weight: 700;
+}
+
+.top-bar .logo img {
+    max-width: 100%;
+    max-height: 150px;
+}
+
+.top-bar .top-bar-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+	padding-right: 40px;
+}
+
+.top-bar .top-bar-text {
+    padding-left: 15px;
+}
+
+.top-bar .top-bar-text h3 {
+    margin: 0 0 5px 0;
+    color: #ff6501;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.top-bar .top-bar-text p {
+    margin: 0;
+    color: #000000;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+@media (max-width: 991.98px) {
+    .top-bar .logo {
+        text-align: center;
+    }
+}
+			</style>
+            <div class="top-bar">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="logo">
+                                <a href="index.html">
+									<img src="img/logo_new_2025.jpg" alt="Home Ground Development Logo" class="logo_img" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 d-none d-lg-block">
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="top-bar-item">
+                                        <div class="top-bar-text">
+                                           <h3>Email Us</h3>
+                                            <p>paul@hgbuild.co.za</p>
+											<p>jason@hgbuild.co.za</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="top-bar-item">
+                                        <div class="top-bar-text">
+											<h3>Call Us</h3>
+                                            <p>0827878568</p>
+											<p>0614465241</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+
+            <!-- Nav Bar Start -->
+			<style>
+.nav-bar {
+    position: relative;
+    background: #ffffff;
+    transition: .3s;
+}
+
+.nav-bar .container-fluid {
+    padding: 0;
+}
+
+.nav-bar.nav-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1366px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    z-index: 999;
+}
+
+.nav-bar .navbar {
+    height: 100%;
+     background: #FFFFFF;
+}
+
+.navbar-nav .nav-link,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+    padding: 10px 10px 8px 10px;
+    color: #000000;
+}
+
+.navbar-nav .nav-link:hover{
+    color: #ff6501 !important;
+    transition: none;
+}
+
+.nav-bar .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 0;
+    background: #f8f9fa;
+}
+
+.nav-bar .btn {
+    color: #ffffff !important;
+    border: 2px solid #ffffff;
+    border-radius: 0;
+}
+
+.nav-bar .btn:hover {
+    color: #ff6501 !important;
+    background: #ff6501;
+    border-color: #ff6501;
+}
+
+@media (min-width: 992px) {
+    .nav-bar {
+        padding: 0 75px;
+    }
+    
+    .nav-bar.nav-sticky {
+        padding: 0;
+    }
+    
+    .nav-bar .navbar {
+        padding: 20px;
+    }
+    
+    .nav-bar .navbar-brand {
+        display: none;
+    }
+    
+    .nav-bar a.nav-link {
+        padding: 8px 15px;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .nav-bar .navbar {
+        padding: 15px;
+    }
+    
+    .nav-bar a.nav-link {
+        padding: 5px;
+    }
+    
+    .nav-bar .dropdown-menu {
+        box-shadow: none;
+    }
+    
+    .nav-bar .btn {
+        display: none;
+    }
+}
+</style>
+            <div class="nav-bar">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg">
+                        <a href="#" class="navbar-brand" style="padding-left: :20px; font-size:25px;">MENU</a>
+                        <button type="button" class="navbar-toggler navbar-dark bg-dark" data-toggle="collapse" data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon "></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+                            <div class="navbar-nav">
+                                 <a href="index.html" class="nav-item nav-link" style="padding-right:20px; font-size:20px;">About</a>
+								<a href="index.html" class="nav-item nav-link" style="padding-right:20px; font-size:20px;">Why Us</a>
+                                <a href="index.html" class="nav-item nav-link" style="padding-right:20px; font-size:20px;">Portfolio</a>
+                                <a href="index.html" class="nav-item nav-link" style="padding-right:20px; font-size:20px;">FAQ</a>
+								<a href="gallery.html" class="nav-item nav-link" style="padding-right:20px; font-size:20px;">Gallery</a>
+								 <a href="index.html" class="nav-item nav-link" style="padding-right:20px; font-size:20px;">Contact</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- Nav Bar End -->
+			<!-- Gallery Section Start -->
+			<style>
+			.portfolio-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .col-lg-4 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+}</style>
+		
+<section id="portfolio" class="py-5">
+    <div class="container">
+		<div class="section-header text-center">
+                                <h5>“It is said that a picture is worth a thousand words – this webpage comprises thousands of words in pictures alone . While they speak for themselves , so does the proud track record of Home Ground Developments. We don’t just build houses, we build homes which families can call their castles for generations to come.”</h5>
+                            </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery_1.jpg" data-lightbox="gallery" >
+                        <img src="img/gallery/gallery_1.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery_2.jpg" data-lightbox="gallery">
+                        <img src="img/gallery/gallery_2.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery_3.jpg" data-lightbox="gallery">
+                        <img src="img/gallery/gallery_3.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery_4.jpg" data-lightbox="gallery">
+                        <img src="img/gallery/gallery_4.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery_5.jpg" data-lightbox="gallery">
+                        <img src="img/gallery/gallery_5.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery_6.jpg" data-lightbox="gallery">
+                        <img src="img/gallery/gallery_6.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+			 <div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery_7.jpg" data-lightbox="gallery">
+                        <img src="img/gallery/gallery_7.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+			 <div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery_8.jpg" data-lightbox="gallery">
+                        <img src="img/gallery/gallery_8.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+			<div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery_9.jpg" data-lightbox="gallery">
+                        <img src="img/gallery/gallery_9.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+			<div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery_10.jpg" data-lightbox="gallery">
+                        <img src="img/gallery/gallery_10.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+			<div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery_11.jpg" data-lightbox="gallery">
+                        <img src="img/gallery/gallery_11.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+			<div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery_12.jpg" data-lightbox="gallery">
+                        <img src="img/gallery/gallery_12.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+			<div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery_13.jpg" data-lightbox="gallery">
+                        <img src="img/gallery/gallery_13.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+			<div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery_14.jpg" data-lightbox="gallery">
+                        <img src="img/gallery/gallery_14.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+			<div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery-15.jpg" data-lightbox="gallery">
+                        <img src="img/gallery/gallery-15.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+			<div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery-16.jpg" data-lightbox="gallery">
+                        <img src="img/gallery/gallery-16.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+			<div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery-17.jpg" data-lightbox="gallery">
+                        <img src="img/gallery/gallery-17.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+			<div class="col-lg-4 col-md-6 mb-4">
+                <div class="portfolio-item">
+                    <a href="img/gallery/gallery-18.jpg" data-lightbox="gallery">
+                        <img src="img/gallery/gallery-18.jpg" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Include Lightbox JS -->
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+            <!-- Gallery End -->
+		<!-- Contact Start -->
+<style>
+.contact {
+    padding: 40px 20px;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+.contact_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 40px;
+}
+
+.contact-item {
+    flex: 1 1 250px;
+    max-width: 300px;
+}
+
+.contact-name h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+	margin-left: 20px;
+}
+
+.contact-name h5 {
+    margin: 5px 0;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.contact-image-logo {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+}
+
+.contact-icon {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .contact_row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-image-logo {
+        margin: 20px 0;
+    }
+}
+</style>
+
+<div class="contact" id="contactus">
+    <div class="contact_row">
+        <!-- Paul -->
+        <div class="contact-item wow fadeInUp" data-wow-delay="0.1s">
+            <div class="contact-name"> 
+                <h3>Paul Dorrofield</h3>
+                <h5>
+                    <a href="https://wa.me/27827878568" target="_blank" style="text-decoration: underline; color: black;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="contact-icon">
+                        082 787 8568
+                    </a>
+                </h5>
+                <h5>
+                    <a href="mailto:paul@hgbuild.co.za" style="text-decoration: underline; color: black;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email" class="contact-icon">
+                        paul@hgbuild.co.za
+                    </a>
+                </h5>
+            </div>
+        </div>
+
+        <!-- Logo -->
+        <div class="contact-item">
+            <img src="img/hgd_transparent_logo.png" alt="HG Build Logo" class="contact-image-logo">
+        </div>
+
+        <!-- Jason -->
+        <div class="contact-item wow fadeInUp" data-wow-delay="0.2s">
+            <div class="contact-name">
+                <h3>Jason Dorrofield</h3>
+                <h5>
+                    <a href="https://wa.me/27614465241" target="_blank" style="text-decoration: underline; color: black;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="contact-icon">
+                        061 446 5241
+                    </a>
+                </h5>
+                <h5>
+                    <a href="mailto:jason@hgbuild.co.za" style="text-decoration: underline; color: black;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email" class="contact-icon">
+                        jason@hgbuild.co.za
+                    </a>
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+            <!-- Footer Start -->
+			<style>
+.footer {
+    position: relative;
+    margin-top: 45px;
+    padding-top: 20px;
+    background: #000000;
+    color: #ffffff;
+}
+
+.footer .footer-link a::before {
+    position: relative;
+    content: "\f105";
+    font-family: 'ArialNarrow', sans-serif;
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .footer-link a:hover {
+    color: #ff6501;
+    letter-spacing: 1px;
+}
+
+.footer .footer-contact p i {
+    width: 25px;
+}
+
+.footer .footer-social {
+    position: relative;
+    margin-top: 20px;
+}
+
+.footer .footer-social a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 7px 0;
+    text-align: center;
+    border: 1px solid rgba(256, 256, 256, .3);
+    border-radius: 60px;
+    transition: .3s;
+}
+
+.footer .footer-social a i {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.footer .footer-social a:hover {
+    background: #ff6501;
+    border-color: #ff6501;
+}
+
+.footer .footer-social a:hover i {
+    color: #030f27;
+}
+
+.footer .copyright {
+    padding: 30px 15px;
+}
+
+.footer .copyright p {
+    margin: 0;
+    color: #ffffff;
+}
+
+.footer .copyright .col-md-6:last-child p {
+    text-align: right;
+}
+
+.footer .copyright p a {
+    color: #ff6501;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.footer .copyright p a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .footer .copyright p,
+    .footer .copyright .col-md-6:last-child p {
+        margin: 5px 0;
+        text-align: center;
+    }
+}
+</style>
+            <div class="footer wow fadeIn" data-wow-delay="0.3s">
+                <div class="container">
+                    <div class="row">
+                            <div class="footer-contact">
+                                <div class="footer-social">
+                                    <a href="https://www.instagram.com/home_ground_developments__?igsh=d203ajd4OXk0Zm5q&utm_source=qr" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>&copy; <a href="#">Home Ground Development</a>, All Right Reserved.</p>
+						</div>
+                        <div class="col-md-6">
+                            <p>Designed By <a href="https://your-digital-architect.onrender.com" target="_blank" rel="noreferrer">Neethling Development</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+        <script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+<script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    })
+</script>
+
+    </body>
+</html>
