@@ -431,11 +431,11 @@
 
 .about .section-header {
     margin-bottom: 30px;
-    text-align: left; /* Align text to the left */
+    text-align: left;
 }
 
 .about .about-text {
-    text-align: left; /* Align paragraph text to the left */
+    text-align: left;
 }
 
 .about .about-img {
@@ -445,9 +445,9 @@
 
 .about .about-img img {
     width: 100%;
-    height: auto; /* Allow natural scaling */
+    height: auto;
     border-radius: 10px;
-    object-fit: contain; /* Show full image, no cropping */
+    object-fit: contain;
 }
 
 .about .about-text p {
@@ -457,11 +457,11 @@
 
 /* Show list bullets */
 .about .about-text ul {
-    padding-left: 20px; /* Some indentation */
+    padding-left: 20px;
 }
 
 .about .about-text li {
-    list-style: disc; /* Default bullet points */
+    list-style: disc;
     margin: 5px 0;
 }
 </style>
@@ -508,7 +508,7 @@
 </div>
 <!-- About End -->
 
-			<!-- Autoplay Videos Start -->
+<!-- Autoplay Videos Start -->
 <style>
 .video-section {
     display: flex;
@@ -516,18 +516,64 @@
     justify-content: center;
     gap: 20px;
     padding: 10px;
-	margin-bottom: 80px;
+    margin-bottom: 80px;
 }
 
 .video-container {
     flex: 1 1 300px;
     max-width: 600px;
+    position: relative;
+    cursor: pointer;
 }
 
 .video-container video {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.video-container video:focus {
+    box-shadow: 0 0 0 3px #0099ff;
+}
+
+/* Zoomed overlay */
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+.video-overlay video {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 15px;
+}
+
+.video-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 </style>
 
@@ -545,7 +591,55 @@
         </video>
     </div>
 </div>
+
+<!-- Overlay container for zoomed video -->
+<div id="zoomed-video-overlay" style="display: none;"></div>
+
+<script>
+// Handle video click
+document.querySelectorAll('.video-container video').forEach(video => {
+    video.addEventListener('click', () => {
+        // Clone video so we don't interrupt the original loop
+        const zoomedVideo = video.cloneNode(true);
+        zoomedVideo.muted = false;
+        zoomedVideo.autoplay = true;
+        zoomedVideo.loop = true;
+        zoomedVideo.controls = true;
+
+        // Create close button
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'video-close-btn';
+        closeBtn.innerHTML = '&times;';
+
+        // Create overlay
+        const overlay = document.getElementById('zoomed-video-overlay');
+        overlay.className = 'video-overlay';
+        overlay.innerHTML = ''; // clear previous
+        overlay.appendChild(closeBtn);
+        overlay.appendChild(zoomedVideo);
+        overlay.style.display = 'flex';
+
+        // Start playing with sound
+        zoomedVideo.play();
+
+        // Close overlay on button click or ESC
+        closeBtn.addEventListener('click', () => {
+            overlay.style.display = 'none';
+            overlay.innerHTML = '';
+        });
+
+        document.addEventListener('keydown', function escHandler(e) {
+            if (e.key === 'Escape') {
+                overlay.style.display = 'none';
+                overlay.innerHTML = '';
+                document.removeEventListener('keydown', escHandler);
+            }
+        });
+    });
+});
+</script>
 <!-- Autoplay Videos End -->
+
 
             <!-- Feature Start-->
 			<style>
